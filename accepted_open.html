@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>RAID 2024 – The 27th International Symposium on Research in Attacks, Intrusions and Defenses</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0px;
+      line-height: 27px;
+      text-transform: none;
+      color: #303030;
+      align-items: center;
+      justify-content: center;
+    }
+    .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  h2 {
+    font-size: 24px;
+    /* text-transform: uppercase; */
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: white;
+    color: #fff;
+    padding: 80px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding:50px 50px;
+    max-width: 1100px;
+
+    }
+
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: white;
+    font-size: 50px;
+  }
+  .logo {
+    color: black;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: black;
+  }
+  .carousel-indicators li {
+    border-color: white;
+  }
+  .carousel-indicators li.active {
+    background-color: black;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  td {
+  text-align: left;
+}
+
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid white;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid white;
+    background-color: #fff !important;
+    color: white;
+  }
+  .panel-heading {
+    color: black !important;
+    background-color: white !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: white;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color:white;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: black!important;
+  }
+  a.nav-item.nav-link.active {
+      color: white;
+      /*background-color: #b86d69;*/
+      background-color: #c2737f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: black !important;
+      /*background-color: #e1adaa !important;*/
+      background-color: #e5c4c9 !important;
+    }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  .navbar img {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: auto;
+
+        }
+    #myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: block;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#myBtn:hover {
+  background-color:#b86d69 ;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  #DLtoc {
+            font: normal 12px/1.5em Arial, Helvetica, sans-serif;
+            }
+
+            #DLheader {
+            }
+            #DLheader h1 {
+            font-size:16px;
+            }
+
+            #DLcontent {
+            font-size:14px;
+            }
+            #DLcontent h2 {
+            font-size:16px;
+            margin-bottom:5px;
+            }
+            #DLcontent h3 {
+            font-size:15px;
+            padding-left:20px;
+            margin-bottom:0px;
+            }
+
+            #DLcontent ul{
+            margin-top:0px;
+            margin-bottom:0px;
+            }
+
+            .DLauthors li{
+            display: inline;
+            list-style-type: none;
+            padding-right: 5px;
+            }
+
+            .DLauthors li:after{
+            content:",";
+            }
+            .DLauthors li.nameList.Last:after{
+            content:"";
+            }
+
+            .DLabstract {
+            padding-left:40px;
+            padding-right:20px;
+            display:block;
+            }
+
+            .DLformats li{
+            display: inline;
+            list-style-type: none;
+            padding-right: 5px;
+            }
+
+            .DLformats li:after{
+            content:",";
+            }
+            .DLformats li.formatList.Last:after{
+            content:"";
+            }
+
+            .DLlogo {
+            vertical-align:middle;
+            padding-right:5px;
+            border:none;
+            }
+
+            .DLcitLink {
+            margin-left:20px;
+            }
+
+            .DLtitleLink {
+            margin-left:20px;
+            }
+
+            .DLotherLink {
+            margin-left:0px;
+            }
+  </style>
+</head>
+<header class="text-center">
+  <nav id="navbar">
+    <div><br></div>
+    <img src="images/logo_2024.png" alt="Logo image" width="120" height="52">
+    <div><br></div>
+  </nav>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <button onclick="topFunction()" id="myBtn" ><span  class="glyphicon glyphicon-chevron-up" ></button>
+
+  <div>
+
+    <nav class="navbar navbar-default navbar-absolute-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+          </button>
+          <!-- <img src="images/logo.PNG" alt="RAID 2022 logo"> -->
+          <!-- <a class="navbar-brand" href="#myPage">Logo</a> -->
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav  mr-auto">
+
+            <li><a  href="index.html">Home</a></li>
+            <!-- <li><a href="instructions.html">Instructions for Authors</a></li> -->
+            <li><a href="call.html">Call for Papers</a></li>
+            <li><a href="venue.html">Venue & Travel</a></li>
+            <!-- <li><a href="social.html">Social Activ,ities</a></li> -->
+            <li><a href="program.html">Program</a></li>
+	          <!--li><a href="booklet.html" target="_blank">Brochure</a></li-->
+            <!-- <li><a href="accepted.html">Accepted Papers</a></li> -->
+            <li><a class="nav-item nav-link active" href="accepted_open.html"> Accepted Papers</a></li>
+
+            <li><a href="awards.html">Awards</a></li>
+
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="committees.html">Committees</a></li>
+            <li><a href="sponsorship.html"> Sponsorship</a></li>
+            <li><a href="contact.html"> Contact</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+ <div>
+
+  <div>
+    <figure class="aligncenter size-full">
+  <img class="responsive" loading="lazy" src="images/2024award.png" width="1110" height="265" >
+</figure>
+</div>
+</header>
+
+<div>
+<div id="accepted" class="container-fluid">
+  <div class="text-center">
+ <h2>Accepted papers</h2>
+ <hr/>
+ 
+</div>
+
+<div class="responsive" style="font-size:17px;"">
+ <p><b> KernJC: Automated Vulnerable Environment Generation for Linux Kernel Vulnerabilities <a href="papers/raid2024-1.pdf">[PDF]</a></b></br>
+  Bonan Ruan, National University of Singapore; Jiahao Liu, National University of Singapore; Chuqi Zhang, National University of Singapore; Zhenkai Liang, National University of Singapore; 
+  </p>
+  <p><b> What do malware analysts want from academia? A survey on the state-of-the-practice to guide research developments <a href="papers/raid2024-2.pdf">[PDF]</a></b></br>
+  Marcus Botacin, Texas A&M University; 
+  </p>
+  <p><b> Cross-Regional Malware Detection via Model Distilling and Federated Learning <a href="papers/raid2024-3.pdf">[PDF]</a></b></br>
+  Marcus Botacin, Texas A&M University; Heitor Gomes, Victoria University of Wellington; 
+  </p>
+  <p><b> Cross-Chain Bridges: Attack Taxonomy, Defenses, and Open Problems <a href="papers/raid2024-4.pdf">[PDF]</a></b></br>
+  Mengya Zhang, The Ohio State University; Xiaokuan Zhang, George Mason University; Yinqian Zhang, Southern University of Science and Technology; Zhiqiang Lin, The Ohio State University; 
+  </p>
+  <p><b> Context-Aware Anomaly Detection Using Vehicle Dynamics <a href="papers/raid2024-5.pdf">[PDF]</a></b></br>
+  Chun-Yu Chen, The University of Michigan; Kang G. Shin, The University of Michigan; Soodeh Dadras, Ford Motor Company; 
+  </p>
+  <p><b> Deception-Resistant Stochastic Manufacturing for Automated Production Lines <a href="papers/raid2024-6.pdf">[PDF]</a></b></br>
+  Zeyu Yang, Zhejiang University; Hongyi Pu, Zhejiang University; Liang He, University of Colorado Denver; Chengtao Yao, Zhejiang University; Jianying Zhou, Singapore University of Technology and Design; Peng Cheng, Zhejiang University; Jiming Chen, Zhejiang University; 
+  </p>
+  <p><b> Honeyquest: Rapidly Measuring the Enticingness of Cyber Deception Techniques with Code-based Questionnaires <a href="papers/raid2024-7.pdf">[PDF]</a></b></br>
+  Mario Kahlhofer, Dynatrace Research, Johannes Kepler University Linz; Stefan Achleitner, Dynatrace Research; Stefan Rass, Johannes Kepler University Linz, LIT Secure and Correct Systems Lab; René Mayrhofer, Johannes Kepler University Linz; 
+  </p>
+  <p><b> Catch You Cause I Can: Busting Rogue Base Stations using CellGuard and the Apple Cell Location Database <a href="papers/raid2024-8.pdf">[PDF]</a></b></br>
+  Lukas Arnold, TU Darmstadt, Secure Mobile Networking Lab; Matthias Hollick, TU Darmstadt, Secure Mobile Networking Lab; Jiska Classen, Hasso Plattner Institute; 
+  </p>
+  <p><b> Large-Scale Security Analysis of Real-World Backend Deployments Speaking IoT-Focused Protocols <a href="papers/raid2024-9.pdf">[PDF]</a></b></br>
+  Carlotta Tagliaro, TU Wien; Martina Komsic, TU Wien; Andrea Continella, University of Twente; Kevin Borgolte, Ruhr University Bochum; Martina Lindorfer, TU Wien; 
+  </p>
+  <p><b> A Second Look at the Portability of Deep Learning Side-Channel Attacks over EM Traces <a href="papers/raid2024-10.pdf">[PDF]</a> </b></br>
+  Mabon Ninan, University of Cincinnati; Evan Nimmo, University of Cincinnati; Shane Reilly, University of Cincinnati; Channing Smith, College of Charleston; Wenhai Sun, Purdue University West Lafayette; Boyang Wang, University of Cincinnati; John M. Emmert, University of Cincinnati; 
+  </p>
+  <p><b> Mateen: Adaptive Ensemble Learning for Network Anomaly Detection <a href="papers/raid2024-11.pdf">[PDF]</a></b></br>
+  Fahad Alotaibi, Imperial College London; Sergio Maffeis, Imperial College London; 
+  </p>
+  <p><b> Leveraging Deep Reinforcement Learning for Cyber-Attack Paths Prediction: Formulation, Generalization, and Evaluation <a href="papers/raid2024-12.pdf">[PDF]</a></b></br>
+  Franco Terranova, Université de Lorraine, CNRS, Inria, LORIA; Abdelkader Lahmadi, Université de Lorraine, CNRS, Inria, LORIA; Isabelle Chrisment, Université de Lorraine, CNRS, Inria, LORIA; 
+  </p>
+  <p><b> The "Big Beast to Tackle": Practices in Quality Assurance for Cyber Threat Intelligence <a href="papers/raid2024-13.pdf">[PDF]</a></b></br>
+  Thomas Geras, HM Munich University of Applied Sciences; Thomas Schreck, HM Munich University of Applied Sciences; 
+  </p>
+  <p><b> Gudifu: Guided Differential Fuzzing for HTTP Request Parsing Discrepancies <a href="papers/raid2024-14.pdf">[PDF]</a></b></br>
+  Bahruz Jabiyev, Dartmouth College; Anthony Gavazzi, Northeastern University; Kaan Onarlioglu, Akamai Technologies; Engin Kirda, Northeastern University; 
+  </p>
+  <p><b> Breaking Privacy in Model-Heterogeneous Federated Learning <a href="papers/raid2024-15.pdf">[PDF]</a></b></br>
+  Atharva Haldankar, Virginia Tech; Arman Riasi, Virginia Tech; Hoang-Dung Nguyen, Virginia Tech; Tran Phuong, University of Arkansas at Little Rock; Thang Hoang, Virginia Tech; 
+  </p>
+  <p><b> KGDist: A Prompt-Based Distillation Attack against LMs Augmented with Knowledge Graphs <a href="papers/raid2024-16.pdf">[PDF]</a></b></br>
+  Peizhuo Lv, SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences; Kai Chen, Institute of Information Engineering, Chinese Academy of Sciences; Jiachen Zhou, SKLOIS, Institute of Information Engineering, Chinese Academy of Sciences; 
+  </p>
+  <p><b> VeriFence: Lightweight and Precise Spectre Defenses for Untrusted Linux Kernel Extensions <a href="papers/raid2024-17.pdf">[PDF]</a></b></br>
+  Luis Gerhorst, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU); Henriette Herzog, Ruhr-Universität Bochum (RUB); Peter Wägemann, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU); Maximilian Ott, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU); Rüdiger Kapitza, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU); Timo Hönig, Ruhr-Universität Bochum (RUB); 
+  </p>
+  <p><b> Tango: Extracting Higher-Order Feedback through State Inference <a href="papers/raid2024-18.pdf">[PDF]</a></b></br>
+  Ahmad Hazimeh, EPFL; Duo Xu, EPFL; Qiang Liu,  EPFL; Yan Wang, Huawei; Mathias Payer, EPFL; 
+  </p>
+  <p><b> ADAPT it! Automating APT Campaign and Group Attribution by Leveraging and Linking Heterogeneous Files <a href="papers/raid2024-19.pdf">[PDF]</a></b></br>
+  Aakanksha Saha, TU Wien; Jorge Blasco, Universidad Politécnica de Madrid; Lorenzo Cavallaro, University College London; Martina Lindorfer, TU Wien; 
+  </p>
+  <p><b> Understanding Web Fingerprinting with a Protocol-Centric Approach <a href="papers/raid2024-20.pdf">[PDF]</a> </b></br>
+  Bogdan Cebere, CISPA Helmholtz Center for Information Security; Christian Rossow, CISPA Helmholtz Center for Information Security; 
+  </p>
+  <p><b> Unraveling the Web of Disinformation: Exploring the Larger Context of State-Sponsored Influence Campaigns on Twitter <a href="papers/raid2024-21.pdf">[PDF]</a></b></br>
+  Mohammad Hammas Saeed, Boston University; Shiza Ali, Boston University; Pujan Paudel, Boston University; Jeremy Blackburn, Binghamton University; Gianluca Stringhini, Boston University; 
+  </p>
+  <p><b> How to Train your Antivirus: RL-based Hardening through the Problem Space <a href="papers/raid2024-22.pdf">[PDF]</a></b></br>
+  Ilias Tsingenopoulos, imec-DistriNet, KU Leuven; Jacopo Cortellazzi, King's College London; Branislav Bosansky, Gen Digital; Simone Aonzo, EURECOM; Davy Preuveneers, KU Leuven; Wouter Joosen, KU Leuven; Fabio Pierazzi, King's College London; Lorenzo Cavallaro, University College London; 
+  </p>
+  <p><b> Down to earth! Guidelines for DGA-based Malware Detection <a href="papers/raid2024-23.pdf">[PDF]</a></b></br>
+  Bogdan Cebere, CISPA Helmholtz Center for Information Security; Jonathan Lasse Bennet Flueren, CISPA Helmholtz Center for Information Security; Silvia Sebastián, CISPA Helmholtz Center for Information Security; Daniel Plohmann, Fraunhofer FKIE; Christian Rossow, CISPA Helmholtz Center for Information Security; 
+  </p>
+  <p><b> CrypTody: Cryptographic Misuse Analysis of IoT Firmware via Data-flow Reasoning <a href="https://dl.acm.org/doi/10.1145/3678890.3678914">[PDF]</a></b></br>
+  Jianing Wang, National University of Singapore; Shanqing Guo, Shandong University; Wenrui Diao, Shandong University; Yue Liu, Southeast University; Haixin Duan, Tsinghua University; Yichen Liu, Indiana University Bloomington; Zhenkai Liang, National University of Singapore; 
+  </p>
+  <p><b> Enhancing Model Poisoning Attacks to Byzantine-Robust Federated Learning via Critical Learning Periods <a href="papers/raid2024-25.pdf">[PDF]</a></b></br>
+  Gang Yan, UC Merced; Hao Wang, Stevens Institute of Technology; Xu Yuan, University of Delaware; Jian Li, Stony Brook University; 
+  </p>
+  <p><b> Obfuscating Provenance-Based Forensic Investigations with Mapping System Meta-Behavior <a href="https://dl.acm.org/doi/10.1145/3678890.3678916">[PDF]</a></b></br>
+  Anyuan Sang, Xidian University; Yuchen Wang, Xidian University; Li Yang, Xidian University, Shaanxi Key Laboratory of Network and System Security; Junbo Jia, Xidian University; Lu Zhou, Xidian University; 
+  </p>
+  <p><b> Replay-resistant Disk Fingerprinting via Unintentional Electromagnetic Emanations <a href="papers/raid2024-27.pdf">[PDF]</a> </b></br>
+  Wenfan Song, Zhejiang University; Jianwei Liu, School of Cyber Science and Technology, Zhejiang University; Yajie Liu, Zhejiang University; Jinsong Han, Zhejiang University; 
+  </p>
+  <p><b> Encrypted Endpoints: Defending Online Services from Illegitimate Bot Automation <a href="papers/raid2024-28.pdf">[PDF]</a></b></br>
+  August See, Universität Hamburg; Kevin Röbert, Universität Hamburg; Mathias Fischer, Universität Hamburg; 
+  </p>
+  <p><b> Prob-Hashcat: Accelerating Probabilistic Password Guessing with Hashcat by Hundreds of Times <a href="https://dl.acm.org/doi/10.1145/3678890.3678919">[PDF]</a></b></br>
+  Ziyi Huang, Nankai University; Ding Wang, Nankai University; Yunkai Zou, Nankai University; 
+  </p>
+  <p><b> Integrating Static Analyses for High-Precision Control-Flow Integrity <a href="papers/raid2024-30.pdf">[PDF]</a></b></br>
+  Florian Kasten, Fraunhofer AISEC; Philipp Zieris, Fraunhofer AISEC; Julian Horsch, Fraunhofer AISEC; 
+  </p>
+  <p><b> Extending C2 Traffic Detection Methodologies: From TLS 1.2 to TLS 1.3-enabled Malware <a href="papers/raid2024-31.pdf">[PDF]</a></b></br>
+  Carlos Novo, INESC TEC, HASLab and DCC FCUP; Sofia Romeiro, INESC-ID / Instituto Superior Técnico, Universidade de Lisboa; Bernardo Portela, INESC TEC, HASLab and DCC FCUP; Diogo Barradas, University of Waterloo; Nuno Santos, INESC-ID / Instituto Superior Técnico, Universidade de Lisboa; 
+  </p>
+  <p><b> AI-Generated Faces in the Real World: A Large-Scale Case Study of Twitter Profile Images <a href="papers/raid2024-32.pdf">[PDF]</a></b></br>
+  Jonas Ricker, Ruhr University Bochum; Dennis Assenmacher, GESIS - Leibniz Institute for the Social Sciences; Thorsten Holz, CISPA Helmholtz Center for Information Security; Asja Fischer, Ruhr University Bochum; Erwin Quiring, Ruhr University Bochum, International Computer Science Institute Berkeley; 
+  </p>
+  <p><b> BluePrint: Automatic Malware Signature Generation for Internet Scanning <a href="papers/raid2024-33.pdf">[PDF]</a></b></br>
+  Kevin Stevens, Georgia Institute of Technology; Mert Erdemir, Georgia Institute of Technology; Hang Zhang, Indiana University Bloomington; Taesoo Kim, Georgia Institute of Technology; Paul Pearce, Georgia Institute of Technology; 
+  </p>
+  <p><b> Fixing Insecure Cellular System Information Broadcasts For Good <a href="papers/raid2024-34.pdf">[PDF]</a></b></br>
+  Alexander J. Ross, North Carolina State University; Bradley Reaves, North Carolina State University; Yomna Nasser, Google; Gil Cukierman, Google; Roger Piqueras Jover, Google; 
+  </p>
+  <p><b> Blocklist-Forecast: Proactive Domain Blocklisting by Identifying Malicious Hosting Infrastructure <a href="https://dl.acm.org/doi/pdf/10.1145/3678890.3678925">[PDF]</a></b></br>
+  Udesh Kumarasinghe, Purdue University; Mohamed Nabeel, Palo Alto Networks; Ravindu De Silva, SCoRe Lab; Charitha Elvitigala, SCoRe Lab; 
+  </p>
+  <p><b> From Victims to Defenders: An Exploration of the \\Phishing Attack Reporting Ecosystem <a href="papers/raid2024-36.pdf">[PDF]</a></b></br>
+  Zhibo Sun, Drexel University; Faris Bugra Kokulu, Arizona State University; Penghui Zhang, Arizona State University; Adam Oest, PayPal; Gianluca Stringhini, Boston University; Tiffany Bao, Arizona State University; Ruoyu Wang, Arizona State University; Yan Shoshitaishvili, Arizona State University; Adam Doupé, Arizona State University; Gail-Joon Ahn, Arizona State University; 
+  </p>
+  <p><b> A Comprehensive, Automated Security Analysis of the Uptane Automotive Over-the-Air Update Framework <a href="papers/raid2024-37.pdf">[PDF]</a></b></br>
+  Robert Lorch, The University of Iowa; Daniel Larraz, The University of Iowa; Cesare Tinelli, The University of Iowa; Omar Chowdhury, Stony Brook University; 
+  </p>
+  <p><b> Beyond REST: Introducing APIF for Comprehensive API Vulnerability Fuzzing <a href="papers/raid2024-38.pdf">[PDF]</a></b></br>
+  Eric Wang, THU; Larry Xu, PTLAB; 
+  </p>
+  <p><b> AudiTrim: A Real-time, General, Efficient, and Low-overhead Data Compaction System for Intrusion Detection <a href="https://dl.acm.org/doi/10.1145/3678890.3679048">[PDF]</a></b></br>
+  Hongbin Sun, Zhongguancun Laboratory; Su Wang, Zhongguancun Laboratory; Zhiliang Wang, Zhongguancun Laboratory; Zheyu Jiang, Tsinghua University; Dongqi Han, Beijing University of Posts and Telecommunications; Jiahai Yang, Zhongguancun Laboratory; 
+  </p>
+  <p><b> You Might Have Known It Earlier: Analyzing the Role of Underground Forums in Threat Intelligence <a href="papers/raid2024-39.pdf">[PDF]</a></b></br>
+  Tommaso Paladini, Politecnico di Milano; Lara Ferro, Politecnico di Milano; Mario Polino, Politecnico di Milano; Stefano Zanero, Politecnico di Milano; Michele Carminati, Politecnico di Milano; 
+  </p>
+  <p><b> Hidden Web Caches Discovery <a href="papers/raid2024-40.pdf">[PDF]</a></b></br>
+  Matteo Golinelli, University of Trento; Bruno Crispo, University of Trento; 
+  </p>
+  <p><b> No Need for Details: Effective Anomaly Detection for Process Control Traffic in Absence of Protocol and Attack Knowledge <a href="papers/raid2024-41.pdf">[PDF]</a></b></br>
+  Franka Schuster, Brandenburg University of Technology Cottbus-Senftenberg; Hartmut König, Brandenburg University of Technology Cottbus-Senftenberg; 
+  </p>
+  <p><b> Efficiently Rebuilding Coverage in Hardware-Assisted Greybox Fuzzing <a href="papers/raid2024-42.pdf">[PDF]</a></b></br>
+  Tai Yue, Academy of Mitary Science, Southern University of Science and Technology; Yibo Jin, Southern University of Science and Technology; Fengwei Zhang, Southern University of Science and Technology (SUSTech); Zhenyu Ning, Hunan University; Pengfei Wang, National University of Defense Technology; Xu Zhou, National University of Defense Technology; Kai Lu, National University of Defense Technology; 
+  </p>
+  </div>
+  
+</div>
+</div>
+
+
+
+         <div style="height:20px;" aria-hidden="true" class="wp-block-spacer"></div>
+      <div style="font-family:Raleway; color:#024852; margin:0 auto 0 auto; width:100%; text-align:center;">
+              <p style="font-weight:bold; font-size:26px; text-align:center;"><u>Organized by</u></p><br>
+      <div style="display: flex; align-items: center; justify-content: center;">
+                <figure style="margin-right: 20px;">
+                <a href="https://www.unipd.it/" target="_blank">
+                <img src="images/logo_unipd.png"  class="img-responsive" alt="polyu" style="max-width: 400px;">
+                </a>
+                </figure>
+                <figure style="margin-right: 20px;">
+                  <a href="https://www.math.unipd.it/" target="_blank">
+                  <img src="images/mathunipd.jpg"  class="img-responsive" alt="polyu" style="max-width: 300px;">
+                  </a>
+                  </figure>
+            </div>
+
+            <p style="font-weight:bold; font-size:26px; text-align:center;"><u>Sponsors</u></p><br>
+
+          <p style="font-weight:bold; font-size:24px; text-align:center;">Diamond </p>
+
+           <div style="display: flex; justify-content: center;">
+            <div style="display: inline-block; width: 17%; box-sizing: border-box; padding: 10px; ">
+              <a href="https://www.kaust.edu.sa/" target="_blank">
+              <img src="images/KAUST.jpeg" alt="KAUST" style="max-width: 100%;">
+              </a>
+            </div>
+          </div>
+
+
+          <p style="font-weight:bold; font-size:24px; text-align:center;">Platinum </p>
+
+          <div style="display: flex; justify-content: center;">
+           <div style="display: inline-block; width: 17%; box-sizing: border-box; padding: 10px; ">
+             <a href="https://www.google.com/" target="_blank">
+             <img src="images/Google-Logo.png" alt="Google" style="max-width: 100%;">
+             </a>
+           </div>
+         </div> 
+      </div>
+        <hr />
+      </div>
+
+
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  var rootElement = document.documentElement;
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+  </script>
+ 
+
+
+</body>
+</html>
