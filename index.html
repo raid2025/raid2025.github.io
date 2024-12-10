@@ -465,6 +465,10 @@
             behavior: "smooth"
           })
         }
+
+	if (document.referrer === "" || !document.referrer.includes("raid2025.github.io")) {
+        window.location.href = "/";
+	}
       </script>
 
 
