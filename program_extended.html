@@ -361,125 +361,130 @@ tr#ROW1  {
   <b>Monday 20/10/2025</b>
   </h4>
   </div>
-  <table id="myTable">
+ <table id="myTable" border="1" cellspacing="0" cellpadding="6" width="100%">
   <tbody>
-  <tr>
-  <td>08:30 - 09:00</td><td>
-  <span style="color:black">Opening Remark</span>
-  </td>
-  </tr>
-<!-- 	  <tr>
-  <td>09:00 - 09:30</td><td>
-  <span style="color:black">Opening</span>
-  </td>
-  </tr> -->
-  <tr id="ROW1">
-    <td> 09:00 - 10:00 </td>
-    <td>
-      <span style="color:black">
-    Keynote I</span>								
+    <tr>
+      <td>08:30 - 09:00</td>
+      <td><span style="color:black">Opening Remark</span></td>
+    </tr>
+
+    <tr id="ROW1">
+      <td>09:00 - 10:00</td>
+      <td><span style="color:black">Keynote I</span></td>
+    </tr>
+
+    <tr id="Keynote">
+      <td colspan="2" id="Keynote">
+        <div>
+          <center>
+            Battista Biggio<br>
+            <b>TBD.</b>
+          </center>
+          <br>
+          <b>Abstract:</b> TBD.<br><br>
+          <b>Bio:</b> TBD.<br>
+        </div>
       </td>
-      </tr><tr id="Keynote">
-        <td colspan="3" id="Keynote">
-            <div>
-            <p>
-              <br>
-<!--               <img src="images/leonardo_cavallaro.jpg" height="25%" width="25%" style="display:block;margin:0 auto;"> -->
-              </p><center>Battista Biggio
-              <br> 
-              <b>TBD.</b></center>
-              <br> 
-              <b>Abstract:</b> TBD.
-              <br>
-              <br> 
+    </tr>
 
-              <b>Bio:</b> TBD.
-              <br>
+    <tr>
+      <td>10:00 - 10:30</td>
+      <td><span style="color:black">Tea Break</span></td>
+    </tr>
 
-            <p></p>
-            </div>
-        </td> 
-      </tr>
-  <tr>
-  <td>10:00 - 10:30</td><td>
-  <span style="color:black">Tea Break</span>
-  </td>
-  </tr>
-  <tr id="ROW1">
-  <td>10:30 - 12:00</td><td>
-  <span style="color:black"> <a href="program_extended.html#web">Session A: Attacks on and Defenses for ML Models</a></span><br>
-  <!-- Papers for Session A -->
+    <!-- Sessions block -->
+    <tr id="ROW1">
+      <td>10:30 - 12:00</td>
+      <td>
+        <table width="100%" style="border-collapse:collapse;">
+          <tr>
+            <!-- Session A -->
+            <td valign="top" style="width:50%; padding:6px; border:1px solid #e5e7eb;">
+              <span style="color:black">
+                <a href="program_extended.html#web">Session A: Attacks on and Defenses for ML Models</a>
+              </span><br><br>
 
+              <b>Reconstruction of Differentially Private Text Sanitization via Large Language Models <a href="papers/raid2025-110.pdf">[PDF]</a></b><br>
+              Shuchao Pang, <i>Nanjing University of Science and Technology</i><br>
+              Zhigang Lu, <i>Western Sydney University</i><br>
+              Haichen Wang, <i>Nanjing University of Science and Technology</i><br>
+              Peng Fu, <i>Institute of Information Engineering, Chinese Academy of Sciences</i><br>
+              Yongbin Zhou, <i>Nanjing University of Science and Technology</i><br>
+              Jason (Minhui) Xue, <i>CSIRO's Data61 and Responsible AI Research (RAIR) Centre, The University of Adelaide</i><br><br>
+
+              <b>An In-model Spy in Edge Intelligence <a href="papers/raid2025-184.pdf">[PDF]</a></b><br>
+              Fengxu Yang, <i>ShanghaiTech University</i><br>
+              Paizhuo Chen, <i>ShanghaiTech University</i><br>
+              Yihui Yan, <i>ShanghaiTech University</i><br>
+              Zhice Yang, <i>ShanghaiTech University</i><br><br>
+
+              <b>VulCodeMark: Adaptive Watermarking for Vulnerability Datasets Protection <a href="papers/raid2025-294.pdf">[PDF]</a></b><br>
+              Di Cao, <i>Swinburne University of Technology</i><br>
+              Shigang Liu, <i>CSIRO's Data61, Australia</i><br>
+              Jun Zhang, <i>Swinburne University of Technology</i><br>
+              Yang Xiang, <i>Digital Capability Research Platform, Swinburne University of Technology</i><br><br>
+
+              <b>Unsupervised Backdoor Detection and Mitigation for Spiking Neural Networks <a href="papers/raid2025-325.pdf">[PDF]</a></b><br>
+              Jiachen Li, <i>RMIT University</i><br>
+              Bang Wu, <i>RMIT University</i><br>
+              Xiaoyu Xia, <i>RMIT University</i><br>
+              Xiaoning Liu, <i>RMIT University</i><br>
+              Xun Yi, <i>RMIT University</i><br>
+              Xiuzhen Zhang, <i>RMIT University</i><br><br>
+
+              <b>Functional Encryption in Secure Neural Network Training: Data Leakage and Practical Mitigations <a href="papers/raid2025-349.pdf">[PDF]</a></b><br>
+              Alexandru Ionita, <i>"Al. I. Cuza" University of Iasi</i><br>
+              Andreea Ionita, <i>"Al. I. Cuza" University of Iasi</i>
+            </td>
+
+            <!-- Session B -->
+            <td valign="top" style="width:50%; padding:6px; border:1px solid #e5e7eb;">
+              <span style="color:black">
+                <a href="program_extended.html#web">Session B: Systems and Software Security</a>
+              </span><br><br>
+              <!-- Add Session B papers here, same format as left -->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- End sessions -->
+
+    <tr>
+      <td>12:00 - 13:30</td>
+      <td><span style="color:black">Lunch Break</span></td>
+    </tr>
+
+    <tr>
+      <td>13:30 - 15:00</td>
+      <td>
+        <span style="color:black"><a href="program_extended.html#mal1">Session A: Intrusion Detection and Response</a></span><br>
+        <span style="color:black"><a href="program_extended.html#mal1">Session B: IoT, Mobile, and VR Security</a></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>15:30 - 16:00</td>
+      <td><span style="color:black">Tea Break</span></td>
+    </tr>
+
+    <tr id="ROW1">
+      <td>16:00 - 16:54</td>
+      <td>
+        <span style="color:black"><a href="program_extended.html#ids">Session A: System Forensics & Investigation</a></span><br>
+        <span style="color:black"><a href="program_extended.html#ids">Session B: Web and Media Security</a></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>18:00</td>
+      <td><span style="color:black">Poster Session and Reception at Sky Point</span></td>
+    </tr>
+  </tbody>
+</table><br><br>  
 
 	  
-	  
-  <span style="color:black"> <a href="program_extended.html#web">Session B: Session: Systems and Software Security</a></span>
-  
-  </td>
-  </tr>
-
-  <td colspan="3">
-  <p>
-    <b>Reconstruction of Differentially Private Text Sanitization via Large Language Models <a href="papers/raid2025-110.pdf">[PDF]</a></b><br>
-    Shuchao Pang, <i>Nanjing University of Science and Technology</i><br>
-    Zhigang Lu, <i>Western Sydney University</i><br>
-    Haichen Wang, <i>Nanjing University of Science and Technology</i><br>
-    Peng Fu, <i>Institute of Information Engineering, Chinese Academy of Sciences</i><br>
-    Yongbin Zhou, <i>Nanjing University of Science and Technology</i><br>
-    Jason (Minhui) Xue, <i>CSIRO's Data61 and Responsible AI Research (RAIR) Centre, The University of Adelaide</i><br><br>
-
-    <b>An In-model Spy in Edge Intelligence <a href="papers/raid2025-184.pdf">[PDF]</a></b><br>
-    Fengxu Yang, <i>ShanghaiTech University</i><br>
-    Paizhuo Chen, <i>ShanghaiTech University</i><br>
-    Yihui Yan, <i>ShanghaiTech University</i><br>
-    Zhice Yang, <i>ShanghaiTech University</i><br><br>
-
-    <b>VulCodeMark: Adaptive Watermarking for Vulnerability Datasets Protection <a href="papers/raid2025-294.pdf">[PDF]</a></b><br>
-    Di Cao, <i>Swinburne University of Technology</i><br>
-    Shigang Liu, <i>CSIRO's Data61, Australia</i><br>
-    Jun Zhang, <i>Swinburne University of Technology</i><br>
-    Yang Xiang, <i>Digital Capability Research Platform, Swinburne University of Technology</i><br><br>
-
-    <b>Unsupervised Backdoor Detection and Mitigation for Spiking Neural Networks <a href="papers/raid2025-325.pdf">[PDF]</a></b><br>
-    Jiachen Li, <i>RMIT University</i><br>
-    Bang Wu, <i>RMIT University</i><br>
-    Xiaoyu Xia, <i>RMIT University</i><br>
-    Xiaoning Liu, <i>RMIT University</i><br>
-    Xun Yi, <i>RMIT University</i><br>
-    Xiuzhen Zhang, <i>RMIT University</i><br><br>
-
-    <b>Functional Encryption in Secure Neural Network Training: Data Leakage and Practical Mitigations <a href="papers/raid2025-349.pdf">[PDF]</a></b><br>
-    Alexandru Ionita, <i>"Al. I. Cuza" University of Iasi</i><br>
-    Andreea Ionita, <i>"Al. I. Cuza" University of Iasi</i><br><br>
-  </p>
-</td>
-  
-  <tr>
-  <td>12:00 - 13:30</td><td>
-  <span style="color:black">Lunch Break</span>
-  </td>
-  </tr><tr>
-  <td>13:30 - 15:00</td><td>
-  <span style="color:black"> <a href="program_extended.html#mal1">Sessions A: Intrusion Detection and Response</a></span><br>
-  <span style="color:black"> <a href="program_extended.html#mal1">Sessions B: IoT, Mobile, and VR Security</a></span>
-  </td>
-  </tr>
-  <tr>
-  <td>15:30 - 16:00</td><td>
-  <span style="color:black">Tea Break</span>
-  </td>
-  </tr><tr id="ROW1">
-  <td>16:00 - 16:54</td><td>
-  <span style="color:black"> <a href="program_extended.html#ids">Sessions A: System Forensics & Investigation</a></span><br>
-  <span style="color:black"> <a href="program_extended.html#ids">Sessions B: Web and Media Security</a></span>
-  </td>
-  </tr>
-  <tr>
-  <td>18:00</td><td>
-  <span style="color:black">Poster Session and Reception at Sky Point</span>
-  </td>
-  </tr></table><div class="text-center"><br><br>
-	  
+<div class="text-center">
  <h4>	  
   <b>Tuesday 21/10/2025</b>
   </h4>
@@ -716,5 +721,6 @@ tr#ROW1  {
 
 </body>
 </html>
+
 
 
