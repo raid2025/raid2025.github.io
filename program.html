@@ -305,9 +305,10 @@ tr#ROW1  {
   border-radius:999px;
   font-size:12px;
   line-height:1.2;
-  white-space:nowrap;
   background:#fff;
   color:#374151;
+  white-space:nowrap;      /* keep badge as one piece */
+  flex:0 0 auto;           /* don't let it stretch */
 }
 .room-badge .dot{
   display:inline-block;
@@ -1292,11 +1293,9 @@ tr#ROW1  {
       }
 
 	  (function(){
-  // Runs inside the program section only
   var program = document.getElementById('program');
   if(!program) return;
 
-  // Find all session header divs (e.g., "Session A: ...", "Session B: ...")
   var headers = program.querySelectorAll('div[style*="font-weight:700"]');
   headers.forEach(function(h){
     var text = h.textContent.trim();
@@ -1304,20 +1303,25 @@ tr#ROW1  {
     var isB = /^Session\s*B\b/i.test(text);
     var isKeynote = /^Keynote\b/i.test(text);
 
-    // Keynote shares the A room (per your note)
+    // make the header a flex row with a small gap
+    h.style.display = 'flex';
+    h.style.alignItems = 'center';
+    h.style.flexWrap = 'wrap';   // allows clean wrap when truly needed
+    h.style.gap = '8px';
+
+    var badge = document.createElement('span');
     if(isKeynote || isA){
-      var badge = document.createElement('span');
       badge.className = 'room-badge';
       badge.title = 'The Grand Ballroom, Level 1, Hilton Surfers Paradise';
-      badge.innerHTML = '<span class="dot"></span>Grand Ballroom · L1';
-      h.appendChild(badge);
+      badge.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#1e3a8a;"></span>Grand Ballroom · L1';
     } else if(isB){
-      var badge = document.createElement('span');
-      badge.className = 'room-badge b';
+      badge.className = 'room-badge';
       badge.title = 'The Promenade Room, Level 1, Hilton Surfers Paradise';
-      badge.innerHTML = '<span class="dot"></span>Promenade Room · L1';
-      h.appendChild(badge);
+      badge.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#065f46;"></span>Promenade Room · L1';
+    } else {
+      return;
     }
+    h.appendChild(badge);
   });
 })();
     </script>
@@ -1382,6 +1386,7 @@ tr#ROW1  {
 
 </body>
 </html>
+
 
 
 
