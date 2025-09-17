@@ -297,6 +297,29 @@ tr#ROW1  {
     }
   }
 
+.room-badge{
+  display:inline-block;
+  margin-left:8px;
+  padding:2px 6px;
+  border:1px solid #e5e7eb;
+  border-radius:999px;
+  font-size:12px;
+  line-height:1.2;
+  white-space:nowrap;
+  background:#fff;
+  color:#374151;
+}
+.room-badge .dot{
+  display:inline-block;
+  width:6px;height:6px;border-radius:999px;margin-right:6px;
+  background:#1e3a8a; /* A = blue */
+}
+.room-badge.b{ /* B gets a different dot color */
+  color:#374151;
+}
+.room-badge.b .dot{
+  background:#065f46; /* B = green */
+}
 
 	
   </style>
@@ -378,7 +401,12 @@ tr#ROW1  {
   <div class="text-center">
  <h2>Full Program</h2>
 <!--  <p> You can download the RAID app on your smartphone from here: <a href="https://whova.com/portal/raids_202406/">https://whova.com/portal/raids_202406/</a>.</p> -->
- <p> Registration 08:00 – 17:00 per day. </p>
+ <p>Registration 08:00 – 17:00 per day at <strong>Level 1, Hilton Surfers Paradise</strong>.</p>
+<p>
+  <strong>Locations:</strong>
+  Keynote & Session A: The Grand Ballroom, Level 1, Hilton Surfers Paradise ·
+  Session B: The Promenade Room, Level 1, Hilton Surfers Paradise
+</p>
 <!--  <p> For more details, check out the <a href="program_extended.html">detailed program</a>.</p> -->
  <div class="text-center">
   <h4>
@@ -1262,6 +1290,36 @@ tr#ROW1  {
       if (!allowedPages.includes(currentPage) && currentPage !== "") {
           window.location.href = "https://raid2025.github.io/index.html";
       }
+
+	  (function(){
+  // Runs inside the program section only
+  var program = document.getElementById('program');
+  if(!program) return;
+
+  // Find all session header divs (e.g., "Session A: ...", "Session B: ...")
+  var headers = program.querySelectorAll('div[style*="font-weight:700"]');
+  headers.forEach(function(h){
+    var text = h.textContent.trim();
+    var isA = /^Session\s*A\b/i.test(text);
+    var isB = /^Session\s*B\b/i.test(text);
+    var isKeynote = /^Keynote\b/i.test(text);
+
+    // Keynote shares the A room (per your note)
+    if(isKeynote || isA){
+      var badge = document.createElement('span');
+      badge.className = 'room-badge';
+      badge.title = 'The Grand Ballroom, Level 1, Hilton Surfers Paradise';
+      badge.innerHTML = '<span class="dot"></span>Grand Ballroom · L1';
+      h.appendChild(badge);
+    } else if(isB){
+      var badge = document.createElement('span');
+      badge.className = 'room-badge b';
+      badge.title = 'The Promenade Room, Level 1, Hilton Surfers Paradise';
+      badge.innerHTML = '<span class="dot"></span>Promenade Room · L1';
+      h.appendChild(badge);
+    }
+  });
+})();
     </script>
 
 
@@ -1324,6 +1382,7 @@ tr#ROW1  {
 
 </body>
 </html>
+
 
 
 
