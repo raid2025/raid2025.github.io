@@ -322,6 +322,19 @@ tr#ROW1  {
   background:#065f46; /* B = green */
 }
 
+.chair-badge{
+  display:inline-flex; align-items:center;
+  margin-left:0; padding:2px 8px;
+  border:1px solid #e5e7eb; border-radius:999px;
+  font-size:12px; line-height:1.2; background:#f9fafb; color:#374151;
+  white-space:nowrap;
+}
+.chair-badge .dot{
+  width:6px;height:6px;border-radius:999px;margin-right:6px;display:inline-block;
+}
+.chair-badge.a .dot{ background:#1e3a8a; }  /* match Session A blue */
+.chair-badge.b .dot{ background:#065f46; }  /* match Session B green */
+
 	
   </style>
 </head>
@@ -1304,36 +1317,99 @@ tr#ROW1  {
           window.location.href = "https://raid2025.github.io/index.html";
       }
 
+// 	  (function(){
+//   var program = document.getElementById('program');
+//   if(!program) return;
+
+//   var headers = program.querySelectorAll('div[style*="font-weight:700"]');
+//   headers.forEach(function(h){
+//     var text = h.textContent.trim();
+//     var isA = /^Session\s*A\b/i.test(text);
+//     var isB = /^Session\s*B\b/i.test(text);
+//     var isKeynote = /^Keynote\b/i.test(text);
+
+//     // make the header a flex row with a small gap
+//     h.style.display = 'flex';
+//     h.style.alignItems = 'center';
+//     h.style.flexWrap = 'wrap';   // allows clean wrap when truly needed
+//     h.style.gap = '8px';
+
+//     var badge = document.createElement('span');
+//     if(isKeynote || isA){
+//       badge.className = 'room-badge';
+//       badge.title = 'The Grand Ballroom, Level 1, Hilton Surfers Paradise';
+//       badge.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#1e3a8a;"></span>Grand Ballroom · L1';
+//     } else if(isB){
+//       badge.className = 'room-badge';
+//       badge.title = 'The Promenade Room, Level 1, Hilton Surfers Paradise';
+//       badge.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#065f46;"></span>Promenade Room · L1';
+//     } else {
+//       return;
+//     }
+//     h.appendChild(badge);
+//   });
+// })();
 	  (function(){
-  var program = document.getElementById('program');
+  const chairByHeader = {
+    // Fill these with actual names (examples below / TBA by default)
+    "Session A: Attacks on and Defenses for ML Models": "Hongsheng Hu",
+    "Session B: Systems and Software Security": "Yujin Huang",
+    "Session A: Intrusion Detection and Response": "Huayi Duan",
+    "Session B: IoT, Mobile, and VR Security": "Tiffany Bao",
+    "Session A: System Forensics & Investigation": "Tiffany Bao",
+    "Session B: Web and Media Security": "Song Fang",
+    "Session A: Machine Learning for Security Applications": "Viet Vo",
+    "Session B: Threat Intelligence & Offensive Tactics": "Shangqi Lai",
+    "Session A: Adversarial Machine Learning": "Bang Wu",
+    "Session B: Malware & Attack Infrastructure": "Heng Yin",
+    "Session A: Security and Privacy in Federated & Distributed Learning": "Bang Wu",
+    "Session B: Hardware Security and Side-Channels": "Andrea Oliveri",
+    "Session A: Network & Protocol Security": "Andrea Oliveri",
+    "Session B: Enterprise and Cloud Security": "Yanick Fratantonio"
+  };
+
+  const program = document.getElementById('program');
   if(!program) return;
 
-  var headers = program.querySelectorAll('div[style*="font-weight:700"]');
-  headers.forEach(function(h){
-    var text = h.textContent.trim();
-    var isA = /^Session\s*A\b/i.test(text);
-    var isB = /^Session\s*B\b/i.test(text);
-    var isKeynote = /^Keynote\b/i.test(text);
+  const headers = program.querySelectorAll('div[style*="font-weight:700"]');
+  headers.forEach(h=>{
+    const text = h.textContent.trim();
+    const isA = /^Session\s*A\b/i.test(text);
+    const isB = /^Session\s*B\b/i.test(text);
+    const isKeynote = /^Keynote\b/i.test(text);
 
-    // make the header a flex row with a small gap
+    // layout for the header line
     h.style.display = 'flex';
     h.style.alignItems = 'center';
-    h.style.flexWrap = 'wrap';   // allows clean wrap when truly needed
+    h.style.flexWrap = 'wrap';
     h.style.gap = '8px';
 
-    var badge = document.createElement('span');
-    if(isKeynote || isA){
-      badge.className = 'room-badge';
-      badge.title = 'The Grand Ballroom, Level 1, Hilton Surfers Paradise';
-      badge.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#1e3a8a;"></span>Grand Ballroom · L1';
-    } else if(isB){
-      badge.className = 'room-badge';
-      badge.title = 'The Promenade Room, Level 1, Hilton Surfers Paradise';
-      badge.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#065f46;"></span>Promenade Room · L1';
-    } else {
-      return;
+    // ROOM badge (keeps your behavior)
+    if (isKeynote || isA || isB){
+      const room = document.createElement('span');
+      room.className = 'room-badge';
+      if (isKeynote || isA){
+        room.title = 'The Grand Ballroom, Level 1, Hilton Surfers Paradise';
+        room.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#1e3a8a;"></span>Grand Ballroom · L1';
+      } else {
+        room.title = 'The Promenade Room, Level 1, Hilton Surfers Paradise';
+        room.innerHTML = '<span class="dot" style="display:inline-block;width:6px;height:6px;border-radius:999px;margin-right:6px;background:#065f46;"></span>Promenade Room · L1';
+      }
+      h.appendChild(room);
     }
-    h.appendChild(badge);
+
+    // CHAIR badge
+    if (isA || isB){
+      // allow per-element override via data-chair="Name"
+      const override = h.getAttribute('data-chair');
+      const chairName = override || chairByHeader[text] || 'TBA';
+
+      const chair = document.createElement('span');
+      chair.className = 'chair-badge ' + (isA ? 'a' : 'b');
+      chair.title = 'Session Chair';
+      chair.innerHTML = '<span class="dot"></span>Chair: ' + chairName;
+      h.appendChild(chair);
+    }
   });
 })();
     </script>
@@ -1420,6 +1496,7 @@ tr#ROW1  {
 
 </body>
 </html>
+
 
 
 
