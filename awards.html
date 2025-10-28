@@ -276,7 +276,7 @@
 <header class="text-center">
   <div><br></div>
   <nav id="navbar">
-    <img src="images/logo_2024.png" alt="Logo image" width="120" height="52">
+    <img src="images/logo_2025.png" alt="Logo image" width="120" height="52">
   </nav>
   <div><br></div>
 </header>
@@ -301,7 +301,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav  mr-auto" style="float: none;display: inline-block;">
 
-     <li><a class="nav-item nav-link active" href="index.html">Home</a></li>
+     <li><a  href="index.html">Home</a></li>
             <!-- <li><a href="instructions.html">Instructions for Authors</a></li> -->
             <li><a href="call.html">Call for Papers</a></li>
 	    <li><a href="call_poster.html">Call for Posters</a></li>
@@ -312,7 +312,7 @@
             <!-- <li><a href="accepted.html">Accepted Papers</a></li> -->
             <li><a href="accepted_open.html">Accepted Papers</a></li>
 
-            <li><a href="awards.html">Awards</a></li>
+            <li><a class="nav-item nav-link active" href="awards.html">Awards</a></li>
 
             <li><a href="registration.html">Registration</a></li> 
             <li><a href="committees.html">Committees</a></li>
@@ -325,12 +325,27 @@
 </nav>
 
 <div class="text-center">
-  <div class="image-responsive">
-  <figure class="aligncenter size-full">
-<img class="responsive" loading="lazy" src="images/2024award.png" width="1100" height="267"  >
-</figure>
-</div>
-</div>
+      <div id="carouselContainer" style="display: flex; justify-content: center;">
+      <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/bg1_resized_new.jpg"  alt="Image 1">
+          </div>
+      
+          <div class="item">
+            <img src="images/bg2_resized.jpg"  alt="Image 2" >
+          </div>
+      
+          <div class="item">
+            <img src="images/bg3_resized.jpg"  alt="Image 3">
+          </div>
+      
+        </div>
+      </div>
+    </div>
+    </div>
 
 
 
@@ -341,19 +356,27 @@
  <h2>Awards</h2>
  </div>
     <div class="responsive" align="justify">
-     <p>RAID will give two types of paper awards. In addition to the  <b>Best Paper award</b>,
-        which recognizes the <b>best overall research from among the accepted papers </b>, there will be the <b>Best Practical Paper award. </b>
-        Our <b> aim </b> for this award is <b>to raise awareness of research advances </b> among security practitioners.
-        This award recognizes a paper that would be impactful and easy to adopt in practice.
-        <!--The award for the Best Practical Paper is  sponsored  by the  <a href="https://cemse.kaust.edu.sa/rc3"> Resilient Computing and Cybersecurity Center (RC3)
-          </a>  , KAUST with a <b>prize of 2,000 euros</b>.-->
-        <br/>
-        <br/>
+    <p><strong>Best Paper Award</strong></p>
+<p>&ldquo;Careless Whisper: Exploiting Silent Delivery Receipts to Monitor Users on Mobile Instant Messengers&rdquo;</p>
+<p>
+  Gabriel Karl Gegenhuber, University of Vienna<br>
+  Maximilian Günther, University of Vienna<br>
+  Markus Maier, University of Vienna<br>
+  Aljosha Judmayer, University of Vienna<br>
+  Florian Holzbauer, University of Vienna<br>
+  Philipp Frenzel, SBA Research<br>
+  Johanna Ullrich, University of Vienna
+</p>
 
-        <!--Both types of paper awards will be decided by a special committee composed by the following members:-->
-        <br/>
+<p><strong>Distinguished Practical Paper Award</strong></p>
+<p>&ldquo;SH3ARS: Privilege Reduction for ARMv8.0-A Secure Monitors&rdquo;</p>
+<p>
+  Jonas Röckl, Friedrich-Alexander-Universität Erlangen-Nürnberg<br>
+  Julian Funk, Friedrich-Alexander-Universität Erlangen-Nürnberg<br>
+  Matti Schulze, Friedrich-Alexander-Universität Erlangen-Nürnberg<br>
+  Tilo Müller, Hof University of Applied Sciences
+</p>
 
-        </p>
 
     </div>
   </div>
@@ -365,48 +388,84 @@
       <div style="font-family:Raleway; color:#024852; margin:0 auto 0 auto; width:100%; text-align:center;">
               <p style="font-weight:bold; font-size:26px; text-align:center;"><u>Organized by</u></p><br>
       <div style="display: flex; align-items: center; justify-content: center;">
-                <figure style="margin-right: 20px;">
-                <a href="https://www.unipd.it/" target="_blank">
-                <img src="images/logo_unipd.png"  class="img-responsive" alt="polyu" style="max-width: 400px;">
+                <figure style="margin-right: -15px;">
+                <a href="https://cis.unimelb.edu.au/" target="_blank">
+                <img src="images/unimelb_logo.png"  class="img-responsive" alt="polyu" style="max-width: 250px;">
                 </a>
                 </figure>
-                <figure style="margin-right: 20px;">
-                  <a href="https://www.math.unipd.it/" target="_blank">
-                  <img src="images/mathunipd.jpg"  class="img-responsive" alt="polyu" style="max-width: 300px;">
+
+		<figure style="margin-right: -15px;">
+                <a href="https://www.uq.edu.au/" target="_blank">
+                <img src="images/uq_logo.png"  class="img-responsive" alt="polyu" style="max-width: 250px;">
+                </a>
+                </figure>
+	      
+                <figure style="margin-right: -15px;">
+                  <a href="https://www.griffith.edu.au/" target="_blank">
+                  <img src="images/griffith_logo.png"  class="img-responsive" alt="polyu" style="max-width: 250px;">
                   </a>
                   </figure>
             </div>
+	<br>
+	<br>
 
             <p style="font-weight:bold; font-size:26px; text-align:center;"><u>Sponsors</u></p><br>
+		<p style="font-weight:bold; font-size:24px; text-align:center;">Silver</p> 
+			  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">
+	  
+				  <!-- University of Melbourne -->
+				  <div style="flex: 1 1 200px; max-width: 250px; box-sizing: border-box; padding: 10px; text-align: center;">
+				    <a href="https://cis.unimelb.edu.au/" target="_blank">
+				      <img src="images/unimelb_logo.png" alt="The University of Melbourne" style="max-width: 100%; height: auto;">
+				    </a>
+				  </div>
+				
+				  <!-- TikTok -->
+				  <div style="flex: 1 1 200px; max-width: 250px; box-sizing: border-box; padding: 10px; text-align: center;">
+				    <a href="https://lifeattiktok.com/" target="_blank">
+				      <img src="images/tiktok_logo.png" alt="TikTok" style="max-width: 100%; height: auto;">
+				    </a>
+				  </div>
 
-          <p style="font-weight:bold; font-size:24px; text-align:center;">Diamond </p>
+				  <div style="flex: 1 1 200px; max-width: 250px; box-sizing: border-box; padding: 10px; text-align: center;">
+				    <a href="https://www.google.com/" target="_blank">
+				      <img src="images/google.png" alt="Google" style="max-width: 100%; height: auto;">
+				    </a>
+				  </div>
+				
+				</div>
 
-           <div style="display: flex; justify-content: center;">
-            <div style="display: inline-block; width: 17%; box-sizing: border-box; padding: 10px; ">
-              <a href="https://www.kaust.edu.sa/" target="_blank">
-              <img src="images/KAUST.jpeg" alt="KAUST" style="max-width: 100%;">
-              </a>
-            </div>
-          </div>
+		
+	<br>
+          <p style="font-weight:bold; font-size:24px; text-align:center;">Bronze</p>
+
+          <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">
+			
+			  <!-- BlockSec -->
+			  <div style="flex: 1 1 200px; max-width: 250px; box-sizing: border-box; padding: 10px; text-align: center;">
+			    <a href="https://blocksec.com/" target="_blank">
+			      <img src="images/BlockSec.svg" alt="BlockSec" style="max-width: 100%; height: auto;">
+			    </a>
+			  </div>
+			
+			  <!-- KAUST -->
+			  <div style="flex: 1 1 200px; max-width: 250px; box-sizing: border-box; padding: 10px; text-align: center;">
+			    <a href="https://www.kaust.edu.sa/en/" target="_blank">
+			      <img src="images/KAUST.jpeg" alt="KAUST" style="max-width: 100%; height: auto;">
+			    </a>
+			  </div>
+
+			</div>
 
 
-          <p style="font-weight:bold; font-size:24px; text-align:center;">Platinum </p>
-
-          <div style="display: flex; justify-content: center;">
-           <div style="display: inline-block; width: 17%; box-sizing: border-box; padding: 10px; ">
-             <a href="https://www.google.com/" target="_blank">
-             <img src="images/Google-Logo.png" alt="Google" style="max-width: 100%;">
-             </a>
-           </div>
-         </div> 
       </div>
         <hr />
       </div>
 
 
-<div class="container-fluid">
-  <hr />
-</div>
+ <div id="footer" class="light ">
+
+    </div>
 
 
 
@@ -457,6 +516,7 @@
 
 </body>
 </html>
+
 
 
 
